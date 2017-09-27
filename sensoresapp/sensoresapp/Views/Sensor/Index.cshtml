@@ -4,13 +4,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="text-center">Sensores</h2>
 
-<div class="container">
+@using (Html.BeginForm(null, null, FormMethod.Get))
+{
+    <fieldset>
+        <legend>Criterios de búsqueda</legend>
+        @Html.Label("buscar", "Sensor:")
+        @Html.TextBox("buscar")
+        @Html.Label("hijosMin", "Fecha desde:")
+        @Html.TextBox("minHijos")
+        @Html.Label("maxHijos", "Fecha hasta:")
+        @Html.TextBox("maxHijos")
+
+        <input type="submit" value="Buscar" />
+    </fieldset>
+}
+<br />
+
+
+@*<div class="container">
     <div class="row">
         <div class="col-md-8">
             @Html.Raw(ViewBag.GridViewString)
         </div>
     </div>
-</div>
+</div>*@
 
