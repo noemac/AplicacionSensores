@@ -1,14 +1,10 @@
 ﻿@using sensoresapp.Models
 @model LoginViewModel
-
-
 @{
     ViewBag.Title = "Iniciar sesión";
 }
 
-
-<h2 class=" col-md-offset-4 col-md-8">@ViewBag.Title.</h2>
-<hr />
+<h2 class="col-md-offset-4 col-md-8">@ViewBag.Title.</h2>
 <div class="row">
     <div class="col-md-6">
         <img src="~/Images/imagenGylComun.png" alt="G&L Group" class="img-responsive" />
@@ -19,7 +15,7 @@
             {
                 @Html.AntiForgeryToken()
                 @*<h4>Use a local account to log in.</h4>*@
-               
+                
                 @Html.ValidationSummary(true)
                 <div class="form-group">
                     @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
