@@ -15,9 +15,14 @@
     @Html.AntiForgeryToken()
     <fieldset>
         <legend>Criterios de búsqueda</legend>
+
         @Html.Label("buscar", "Sensor:")
-        @Html.EditorFor(model => model.Id,
-        new { htmlAttributes = new { @id = "id" } })
+
+        @*Se vincula el drowdownlist con el modelo*@
+        @Html.DropDownListFor(model => model.Id, ViewBag.SensoresDDL as SelectList)
+
+        @*@Html.EditorFor(model => model.Id,
+        new { htmlAttributes = new { @id = "id" } })*@
         @Html.Label("minHijos", "Fecha desde:")
         @Html.EditorFor(model => model.FechaDesde,
         new { htmlAttributes = new { @class = "date-time-picker", @id="minHijos" } })

@@ -12,9 +12,40 @@ namespace sensoresapp.Controllers
     {
         // GET: Sensor
         [Authorize]
-        public ActionResult Index()
+        public async System.Threading.Tasks.Task<ActionResult> Index()
         {
 
+            //Consultar web api, traer todos los sensors
+            string url = "http://192.168.0.173:8080/granja/sensores";
+
+            var table = new DataTable();
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                System.Net.Http.HttpResponseMessage response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    table = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
+
+                    var jsonPuro = data;
+                }
+            }
+
+            //Popular ddl
+            List<SelectListItem> _sensores = new List<SelectListItem>();
+            _sensores.Add(new SelectListItem { Text = "Seleccione Sensor", Value = "0" });
+
+            foreach (DataRow item in table.Rows)
+            {
+                _sensores.Add(new SelectListItem { Text = "Sensor" + item["id"], Value = item["id"].ToString() });
+            }
+
+            ViewBag.SensoresDDL = new SelectList(_sensores, "Value", "Text");
 
             return View();
         }
@@ -130,6 +161,40 @@ namespace sensoresapp.Controllers
 
             /**/
             #endregion
+
+
+            //Consultar web api, traer todos los sensores, por SEGUNDA VEZ, por perder los valores
+            //que habia cargado previamente en index
+            url = "http://192.168.0.173:8080/granja/sensores";
+
+            var table2 = new DataTable();
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                System.Net.Http.HttpResponseMessage response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    table2 = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
+
+                    var jsonPuro = data;
+                }
+            }
+
+            //Popular ddl
+            List<SelectListItem> _sensores = new List<SelectListItem>();
+            _sensores.Add(new SelectListItem { Text = "Seleccione Sensor", Value = "0" });
+
+            foreach (DataRow item in table2.Rows)
+            {
+                _sensores.Add(new SelectListItem { Text = "Sensor" + item["id"], Value = item["id"].ToString() });
+            }
+
+            ViewBag.SensoresDDL = new SelectList(_sensores, "Value", "Text");
 
             return View("Index");
         }
