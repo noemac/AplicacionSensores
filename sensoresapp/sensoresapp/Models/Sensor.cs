@@ -8,6 +8,9 @@ namespace sensoresapp.Models
 {
     public class Sensor
     {
+        [Display(Name = "Id")]
+        public int Id { get; set; }
+
         [Display(Name = "Fecha Desde")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd hh:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime FechaDesde { get; set; }

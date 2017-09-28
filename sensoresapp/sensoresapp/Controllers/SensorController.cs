@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using sensoresapp.Models;
+using System.Data;
 
 namespace sensoresapp.Controllers
 {
@@ -38,39 +39,92 @@ namespace sensoresapp.Controllers
             #region listar sensores en grilla directamente
             // URL: http://techfunda.com/howto/305/consuming-external-web-api-in-asp-net-mvc
             //string url = "http://192.168.0.173:8080/granja/sensores";
-            string url = "http://192.168.0.173:8080/granja/sensores/fecha?date1=2017-09-09 21:15:35&date2=2017-09-27 21:18:22";
+
+            var anio1 = parametrosBusqueda.FechaDesde.Year;
+            var mes1 = parametrosBusqueda.FechaDesde.Month;
+            var dia1 = parametrosBusqueda.FechaDesde.Day;
+            var hora1 = parametrosBusqueda.FechaDesde.Hour;
+            var minuto1 = parametrosBusqueda.FechaDesde.Minute;
+
+            var anio2 = parametrosBusqueda.FechaHasta.Year;
+            var mes2 = parametrosBusqueda.FechaHasta.Month;
+            var dia2 = parametrosBusqueda.FechaHasta.Day;
+            var hora2 = parametrosBusqueda.FechaHasta.Hour;
+            var minuto2 = parametrosBusqueda.FechaHasta.Minute;
+
+            ViewBag.Mensaje = string.Empty;
+
+            string url = 
+            string.Format("http://192.168.0.173:8080/granja/sensores/fecha?date1={0}-{1}-{2} {3}:{4}:00&date2={5}-{6}-{7} {8}:{9}:00",
+            anio1,
+            mes1,
+            dia1,
+            hora1,
+            minuto1,
+            anio2,
+            mes2,
+            dia2,
+            hora2,
+            minuto2
+            );
 
             using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
             {
                 client.BaseAddress = new Uri(url);
                 client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new
-System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
                 System.Net.Http.HttpResponseMessage response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
                     var data = await response.Content.ReadAsStringAsync();
-                    var table =
-Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
+                    var table = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
 
                     var jsonPuro = data;
 
 
-                    System.Web.UI.WebControls.GridView gView = new
-System.Web.UI.WebControls.GridView();
-                    gView.DataSource = table;
-                    gView.DataBind();
-                    using (System.IO.StringWriter sw = new System.IO.StringWriter())
+                    if (table.Rows.Count>0)
                     {
-                        using (System.Web.UI.HtmlTextWriter htw = new
-    System.Web.UI.HtmlTextWriter(sw))
+                        DataRow[] resultBusquedaPorIdSensor = null;
+
+                        //parametrosBusqueda.Id == 0 traeme todos los resultados sin filtrar.
+                        if (parametrosBusqueda.Id > 0)
                         {
-                            gView.RenderControl(htw);
-                            ViewBag.noelia = "hola mundo";
-                            ViewBag.GridViewString = sw.ToString();
+                            resultBusquedaPorIdSensor = table.Select("id_sensor = " + parametrosBusqueda.Id + "");
+                        }
+                        else
+                        {
+                            resultBusquedaPorIdSensor = table.Select();
+                        }
+
+                        if (resultBusquedaPorIdSensor.Count() > 0)
+                        {
+                            ViewBag.Mensaje = string.Empty;
+
+                            var tableFiltrada = resultBusquedaPorIdSensor.CopyToDataTable();
+
+                            System.Web.UI.WebControls.GridView gView = new System.Web.UI.WebControls.GridView();
+                            gView.DataSource = tableFiltrada;
+                            gView.DataBind();
+                            using (System.IO.StringWriter sw = new System.IO.StringWriter())
+                            {
+                                using (System.Web.UI.HtmlTextWriter htw = new System.Web.UI.HtmlTextWriter(sw))
+                                {
+                                    gView.RenderControl(htw);
+                                    ViewBag.GridViewString = sw.ToString();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            ViewBag.Mensaje = "Sin Resultados";
                         }
                     }
+                    else
+                    {
+                        ViewBag.Mensaje = "Sin Resultados";
+                    }
+                    
                 }
             }
 

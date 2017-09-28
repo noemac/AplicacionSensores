@@ -16,7 +16,8 @@
     <fieldset>
         <legend>Criterios de búsqueda</legend>
         @Html.Label("buscar", "Sensor:")
-        @Html.TextBox("buscar")
+        @Html.EditorFor(model => model.Id,
+        new { htmlAttributes = new { @id = "id" } })
         @Html.Label("minHijos", "Fecha desde:")
         @Html.EditorFor(model => model.FechaDesde,
         new { htmlAttributes = new { @class = "date-time-picker", @id="minHijos" } })
@@ -36,9 +37,10 @@
     <div class="row">
         <div class="col-md-8">
             @Html.Raw(ViewBag.GridViewString)
+          <span class="danger">@Html.Raw(ViewBag.Mensaje)</span>   
         </div>
     </div>
-</div>*
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
