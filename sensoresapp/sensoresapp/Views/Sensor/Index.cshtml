@@ -41,8 +41,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
+            <span class="text-danger">@Html.Raw(ViewBag.CantidadResultados)</span>   
             @Html.Raw(ViewBag.GridViewString)
-          <span class="danger">@Html.Raw(ViewBag.Mensaje)</span>   
+          <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>   
         </div>
     </div>
 </div>

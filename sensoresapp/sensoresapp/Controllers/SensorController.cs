@@ -84,6 +84,7 @@ namespace sensoresapp.Controllers
             var minuto2 = parametrosBusqueda.FechaHasta.Minute;
 
             ViewBag.Mensaje = string.Empty;
+            ViewBag.CantidadResultados = string.Empty;
 
             string url = 
             string.Format("http://192.168.0.173:8080/granja/sensores/fecha?date1={0}-{1}-{2} {3}:{4}:00&date2={5}-{6}-{7} {8}:{9}:00",
@@ -131,6 +132,7 @@ namespace sensoresapp.Controllers
                         if (resultBusquedaPorIdSensor.Count() > 0)
                         {
                             ViewBag.Mensaje = string.Empty;
+                            ViewBag.CantidadResultados = "<h3>Cantidad de Resultados: " + resultBusquedaPorIdSensor.Count() + "</h3>";
 
                             var tableFiltrada = resultBusquedaPorIdSensor.CopyToDataTable();
 
