@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using sensoresapp.Models;
 
 namespace sensoresapp.Controllers
 {
@@ -10,11 +11,34 @@ namespace sensoresapp.Controllers
     {
         // GET: Sensor
         [Authorize]
-        public async System.Threading.Tasks.Task<ActionResult> Index()
+        public ActionResult Index()
+        {
+
+
+            return View();
+        }
+
+        // GET: Sensor/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: Sensor/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Sensor/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async System.Threading.Tasks.Task<ActionResult> Buscar(Sensor parametrosBusqueda)
         {
             #region listar sensores en grilla directamente
             // URL: http://techfunda.com/howto/305/consuming-external-web-api-in-asp-net-mvc
-            string url = "http://192.168.0.173:8080/granja/sensores";
+            //string url = "http://192.168.0.173:8080/granja/sensores";
+            string url = "http://192.168.0.173:8080/granja/sensores/fecha?date1=2017-09-09 21:15:35&date2=2017-09-27 21:18:22";
 
             using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
             {
@@ -53,35 +77,7 @@ System.Web.UI.WebControls.GridView();
             /**/
             #endregion
 
-            return View();
-        }
-
-        // GET: Sensor/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Sensor/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Sensor/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return View("Index");
         }
 
         // GET: Sensor/Edit/5
