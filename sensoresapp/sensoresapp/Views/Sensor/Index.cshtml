@@ -1,6 +1,8 @@
 ﻿<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
 <link href="~/Content/jquery-ui-timepicker-addon.min.css" rel="stylesheet" />
 
+
+
 @model sensoresapp.Models.Sensor
 
 @{
@@ -42,9 +44,9 @@
     <div class="row">
         <div class="col-md-8">
 
-            <div id="divProcessing">
+            @*<div id="divProcessing">
                 <p>Processing, please wait . . . <img src="../../Content/ajax-loader.gif"></p>
-            </div>
+            </div>*@
             <div id="divResultados">
                 <span class="text-danger">@Html.Raw(ViewBag.CantidadResultados)</span>
                 @Html.Raw(ViewBag.GridViewString)
@@ -58,6 +60,9 @@
     @Scripts.Render("~/bundles/jqueryval")
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
     <script src="~/Scripts/jquery-ui-timepicker-addon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.3/src/loadingoverlay.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.3/extras/loadingoverlay_progress/loadingoverlay_progress.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $(function () {
@@ -71,42 +76,13 @@
                 });
             });
 
-            //jQuery.validator.methods.date = function (value, element) {
-            //    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-            //    if (isChrome) {
-            //        var d = new Date();
-            //        return this.optional(element) || !/Invalid|NaN/.test(new Date(d.toLocaleDateString(value)));
-            //    } else {
-            //        return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
-            //    }
-            //};
-
-            // Hide the "busy" Gif at load:
-            debugger;
-            $("#divProcessing").hide();
+            
 
             $("#myform").on("submit", function (event) {
-                //event.preventDefault();
-
-                //// Show the "busy" Gif:
-                $("#divProcessing").show();
                 $("#divResultados").hide();
-                //var url = $(this).attr("action");
-                //var formData = $(this).serialize();
-                //$.ajax({
-                //    url: url,
-                //    type: "POST",
-                //    data: formData,
-                //    dataType: "json",
-                //    success: function (resp) {
+                $.LoadingOverlay("show");
 
-                //        // Hide the "busy" gif:
-                //        $("#divProcessing").hide();
-
-                //        // Do something useful with the data:
-                //        $("<h3>" + resp.FirstName + " " + resp.LastName + "</h3>").appendTo("#divResult");
-                //    }
-                //})
+                
             });
         });
 
