@@ -1,0 +1,13 @@
+﻿body {
+}
+.form-group-custom{
+    min-height: 78px;
+}
+.btn-buscar{
+    margin-top: 24px;
+}
+.grilla-centrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

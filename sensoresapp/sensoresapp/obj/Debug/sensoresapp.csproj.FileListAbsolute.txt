@@ -96,4 +96,3 @@ C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Secu
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csproj.CoreCompileInputs.cache
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
-C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
