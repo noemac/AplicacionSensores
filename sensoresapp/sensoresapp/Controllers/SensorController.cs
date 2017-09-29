@@ -114,6 +114,8 @@ namespace sensoresapp.Controllers
 
                     var jsonPuro = data;
 
+                    //volcar data como json a viewbag
+                    ViewBag.listado = data;
 
                     if (table.Rows.Count>0)
                     {
