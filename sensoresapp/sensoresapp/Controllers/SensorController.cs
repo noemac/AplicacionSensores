@@ -85,17 +85,24 @@ namespace sensoresapp.Controllers
             // URL: http://techfunda.com/howto/305/consuming-external-web-api-in-asp-net-mvc
             //string url = "http://192.168.0.173:8080/granja/sensores";
 
+            //Convertimos ahora ToLocalTime, porque al ser que que trabajamos con timestamp, que usa la hora universal
+            //toma en cuenta que tenemos 3 horas menos en buenos aires GMT-3
+            //https://greenwichmeantime.com/time-zone/south-america/argentina/
+
+            parametrosBusqueda.FechaDesde = parametrosBusqueda.FechaDesde.ToLocalTime();
+            parametrosBusqueda.FechaHasta = parametrosBusqueda.FechaHasta.ToLocalTime();
+
             var anio1 = parametrosBusqueda.FechaDesde.Year;
-            var mes1 = parametrosBusqueda.FechaDesde.Month;
-            var dia1 = parametrosBusqueda.FechaDesde.Day;
-            var hora1 = parametrosBusqueda.FechaDesde.Hour;
-            var minuto1 = parametrosBusqueda.FechaDesde.Minute;
+            var mes1 = parametrosBusqueda.FechaDesde.Month.ToString("00");
+            var dia1 = parametrosBusqueda.FechaDesde.Day.ToString("00");
+            var hora1 = parametrosBusqueda.FechaDesde.Hour.ToString("00");
+            var minuto1 = parametrosBusqueda.FechaDesde.Minute.ToString("00");
 
             var anio2 = parametrosBusqueda.FechaHasta.Year;
-            var mes2 = parametrosBusqueda.FechaHasta.Month;
-            var dia2 = parametrosBusqueda.FechaHasta.Day;
-            var hora2 = parametrosBusqueda.FechaHasta.Hour;
-            var minuto2 = parametrosBusqueda.FechaHasta.Minute;
+            var mes2 = parametrosBusqueda.FechaHasta.Month.ToString("00");
+            var dia2 = parametrosBusqueda.FechaHasta.Day.ToString("00");
+            var hora2 = parametrosBusqueda.FechaHasta.Hour.ToString("00");
+            var minuto2 = parametrosBusqueda.FechaHasta.Minute.ToString("00");
 
             ViewBag.Mensaje = string.Empty;
             ViewBag.CantidadResultados = string.Empty;
@@ -135,7 +142,16 @@ namespace sensoresapp.Controllers
                     if (results.Count > 0)
                     {
                         //Filtro por id de sensor con LINQ
-                        var resultadofiltrado = (from item in results where item.id_sensor == parametrosBusqueda.Id select item).ToList();
+                        var resultadofiltrado = new List<dynamic>();
+                        if (parametrosBusqueda.Id != 0)
+                        {
+                            resultadofiltrado = (from item in results where item.id_sensor == parametrosBusqueda.Id select item).ToList();
+                        }
+                        else
+                        {
+                            resultadofiltrado = (from item in results select item).ToList();
+                        }
+                        
 
                         if (resultadofiltrado.Count > 0)
                         {
@@ -152,7 +168,7 @@ namespace sensoresapp.Controllers
                                 var itemSensor = new ClaseSensor();
 
                                 itemSensor.id = item.id;
-                                // itemSensor.fechalectura = convertirTimeStampADateTime(item.lectura); //funcion para convertir timestamp a datetime
+                                 itemSensor.fechalectura = convertirTimeStampADateTime(item.lectura); //funcion para convertir timestamp a datetime
                                 //var itemSensor.fechalectura = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(Math.Round(1372061224000 / 1000d)).ToLocalTime();
                                 Console.WriteLine(itemSensor.fechalectura); // Prints: 6/24/2013 10:07:04 AM
 
@@ -282,12 +298,10 @@ namespace sensoresapp.Controllers
         /// <returns></returns>
         private string convertirTimeStampADateTime(dynamic lectura)
         {
-            double timestamp = (double)lectura;
-            DateTime lectura_date1 = new DateTime(Convert.ToInt64(timestamp));
-            DateTime lecturafechadatetime = Convert.ToDateTime(lectura_date1);
-            //var lecturafecha = Convert.ToDateTime(lectura_date1).ToString("dd-mm-yyyy HH:mm:ss");            
+            var primeros10dig = Convert.ToDouble(Convert.ToString(lectura).Substring(0,10));
+            var respuesta = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(primeros10dig).ToString("dd/MM/yyyy HH:mm:ss");        
 
-            return lecturafechadatetime.ToString();
+            return respuesta;
         }
 
         // GET: Sensor/Edit/5
