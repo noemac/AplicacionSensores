@@ -73,11 +73,9 @@
                 </div>*@
             <div id="divResultados">
                 <span class="text-danger">@Html.Raw(ViewBag.CantidadResultados)</span>
-                <div class="grilla-centrada table table-">
-                    @*@Html.Raw(ViewBag.GridViewString) <-- comento esto que es la grilla vieja*@
-
-                    @if (ViewBag.resultado != null)
-                    {
+                @if (ViewBag.resultado != null)
+                {
+                    <div class="grilla-centrada table table">
                             <!--09- armo la tabla con los datos-->
                         <div class="row">
                             <div class="col-md-12">
@@ -132,8 +130,9 @@
                                 </table>
                             </div>
                         </div>
-                    }
-                </div>
+
+                    </div>                    
+                }
                 <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>
             </div>
         </div>
