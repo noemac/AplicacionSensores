@@ -6,14 +6,23 @@ using System.Web;
 using sensoresapp.Models;
 using System.Threading.Tasks;
 using sensoresapp.Utils;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
 
 namespace sensoresapp.Utils
 {
     public class API
     {
-        private const string URL_sensores = "http://192.168.0.173:8080/granja/sensores";
+        private const string IP_SERVIDOR = "http://192.168.0.173:8080/granja/";
+        private const string URL_sensores = IP_SERVIDOR + "/sensores";
+        private const string URL_sensores_Update = IP_SERVIDOR + "/sensores/update";
 
 
+        /// <summary>
+        /// Obtiene todos los sensores y devuelve una datatable
+        /// </summary>
+        /// <returns></returns>
         public static DataTable getSensores()
         {
             //Consultar web api, traer todos los sensors
@@ -147,6 +156,73 @@ namespace sensoresapp.Utils
 
 
             return resultadosparaview;
+        }
+
+        /// <summary>
+        /// Trae sensor por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static ClaseSensor getSensoresPorId(int id)
+        {
+            DataTable ListaDeSensores = API.getSensores();
+
+            //Consulta con LINQ
+            ClaseSensor resultado = (from item in ListaDeSensores.AsEnumerable()
+                                           where Convert.ToInt32(item["id"]) == id
+                                           select new ClaseSensor
+                                           {
+                                               id = Convert.ToInt32(item["id"]),
+                                               ip = item["ip"].ToString(),
+                                               mac = item["mac"].ToString(),
+                                               puerto = item["puerto"].ToString(),
+                                               refresco = item["refresco"].ToString(),
+                                               ubicacion = item["ubicacion"].ToString()
+                                           }).FirstOrDefault();
+
+            return resultado;
+        }
+
+
+        public static bool ActualizarSensor(ClaseSensor model)
+        {
+            bool PudoActualizar = false;
+
+            //Consultar web api, traer todos los sensors
+            string url = URL_sensores_Update;
+
+            var table = new DataTable();
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                //System.Net.Http.HttpContent itemParaActualizar = new system.Net.Http.HttpContent();
+
+
+
+                var jsonString = "{" +
+                    "\"id\": "+ model.id +"," +
+                    "\"ip\": \""+model.ip+"\"," +
+                    "\"puerto\": "+ model.puerto +"," +
+                    "\"mac\": \""+model.mac+"\"," +
+                    "\"ubicacion\": \""+model.ubicacion+"\"," +
+                    "\"refresco\": "+model.refresco +" " +
+                    "}";
+
+                var httpContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+                System.Net.Http.HttpResponseMessage response = client.PutAsync(url, httpContent).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PudoActualizar = true;
+                }
+            }
+
+            return PudoActualizar;
         }
     }
 }

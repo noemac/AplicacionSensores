@@ -379,8 +379,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Sensor\Index.cshtml" />
     <Content Include="Views\Sensor\Buscador.cshtml" />
-    <Content Include="Views\Sensor\Editar.cshtml" />
     <Content Include="Views\Sensor\Detalle.cshtml" />
+    <Content Include="Views\Sensor\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

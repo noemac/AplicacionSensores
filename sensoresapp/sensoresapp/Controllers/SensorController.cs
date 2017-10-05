@@ -80,24 +80,50 @@ namespace sensoresapp.Controllers
         public ActionResult Editar(int id)
         {
             ViewBag.IdSensor = id;
+            ViewBag.Actualizo = false;
+            ViewBag.Mensaje = string.Empty;
 
-            sensoresapp.Utils.ClaseSensor hola = new ClaseSensor();
-            hola.id = 1;
-            hola.ip = "127.0.0.1";
-            hola.mac = "127.0.0.2";
-            hola.puerto = "127";
-            hola.refresco = "1000";
-            hola.ubicacion = "12425454,5314231";
+            ClaseSensor sensorSeleccionado = API.getSensoresPorId(id);
 
-            return View(hola);
+            return View(sensorSeleccionado);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(ClaseSensor model, string returnUrl)
+        {
+            returnUrl = null;
+
+            if (ModelState.IsValid)
+            {
+                bool PudoActualizar = API.ActualizarSensor(model);
+                if (PudoActualizar)
+                {
+                    ViewBag.Actualizo = true;
+                    ViewBag.Mensaje = "Actualizó Correctamente, Presione Volver a lista";
+                }
+            }
+
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+
+
+
         }
 
         // GET: Sensor/Details/5
         public ActionResult Detalle(int id)
         {
-            ViewBag.IdSensor = id;
 
-            return View();
+            ViewBag.IdSensor = id;
+            ViewBag.Actualizo = false;
+            ViewBag.Mensaje = string.Empty;
+
+            ClaseSensor sensorSeleccionado = API.getSensoresPorId(id);
+
+            return View(sensorSeleccionado);;
         }
 
 
