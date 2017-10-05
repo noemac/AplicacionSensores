@@ -27,7 +27,7 @@ namespace sensoresapp.Controllers
             var reqUsers = from item in sensores.AsEnumerable()
                            select new
                            {
-                               id = item["id"],
+                               Id = item["id"],
                                PlaceName = "Sensor" + item["id"],
                                GeoLong = Utilities.ObtenerGeoLong(item["ubicacion"].ToString()),
                                GeoLat = Utilities.ObtenerGeoLat(item["ubicacion"].ToString())

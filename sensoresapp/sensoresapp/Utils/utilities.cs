@@ -44,13 +44,13 @@ namespace sensoresapp.Utils
         public static string ObtenerGeoLat(string coordenadas)
         {
             var arrayCoordenadas = coordenadas.Split(',');
-            return arrayCoordenadas[0];
+            return arrayCoordenadas[1];
         }
 
         public static object ObtenerGeoLong(string coordenadas)
         {
             var arrayCoordenadas = coordenadas.Split(',');
-            return arrayCoordenadas[1];
+            return arrayCoordenadas[0];
         }
 
         /// <summary>
