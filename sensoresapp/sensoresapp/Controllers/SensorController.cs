@@ -47,7 +47,7 @@ namespace sensoresapp.Controllers
         // POST: Sensor/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Buscar(Sensor parametrosBusqueda)
+        public ActionResult Index(Sensor parametrosBusqueda)
         {
             ViewBag.resultado = null;
 
@@ -74,7 +74,7 @@ namespace sensoresapp.Controllers
             //Cargar dropdownlist
             ViewBag.SensoresDDL = Utilities.LlenarDropDownList(sensores);
 
-            return View("Index");
+            return View();
         }
 
 

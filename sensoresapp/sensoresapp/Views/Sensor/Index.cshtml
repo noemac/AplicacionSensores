@@ -19,7 +19,7 @@
         <Legend> Criterios de búsqueda</Legend>
     </div>
     <div class="row grilla-centrada">
-        @using (Html.BeginForm("Buscar", "Sensor", FormMethod.Post, new { encType = "multipart/form-data", id = "myform", name = "myform", @class = "form-inline" }))
+        @using (Html.BeginForm("Index", "Sensor", FormMethod.Post, new { encType = "multipart/form-data", id = "myform", name = "myform", @class = "form-inline" }))
         {
             @Html.AntiForgeryToken()
 
