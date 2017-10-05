@@ -169,8 +169,9 @@
             marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
 
             // put in some information about each json object - in this case, the opening hours.
+            debugger;
             var infowindow = new google.maps.InfoWindow({
-                content: "<div class='infoDiv'><h2>" + item.PlaceName + "</div></div>"
+                content: "<div class='infoDiv'><h2><a href='Detalle/" + item.Id +"'>" +   item.PlaceName + "</a></div></div>"
             });
 
             // finally hook up an "OnClick" listener to the map so it pops up out info-window when the marker-pin is clicked!
