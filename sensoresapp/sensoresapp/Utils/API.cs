@@ -40,11 +40,11 @@ namespace sensoresapp.Utils
             return table;
         }
 
-        public static List<ClaseSensor> BuscarRegistros(Sensor parametrosBusqueda)
+        public static List<ClaseSensorRegistro> BuscarRegistros(Sensor parametrosBusqueda)
         {
 
             //04- Creo una lista de mi clase ClaseSensor
-            List<ClaseSensor> resultadosparaview = new List<ClaseSensor>();
+            List<ClaseSensorRegistro> resultadosparaview = new List<ClaseSensorRegistro>();
 
             // listar sensores en grilla directamente
             // URL: http://techfunda.com/howto/305/consuming-external-web-api-in-asp-net-mvc
@@ -121,7 +121,7 @@ namespace sensoresapp.Utils
                             foreach (var item in results)
                             {
                                 //creo una instancia por cada registro de sensor
-                                var itemSensor = new ClaseSensor();
+                                var itemSensor = new ClaseSensorRegistro();
 
                                 itemSensor.id = item.id;
                                 itemSensor.fechalectura = Utilities.convertirTimeStampADateTime(item.lectura); //funcion para convertir timestamp a datetime

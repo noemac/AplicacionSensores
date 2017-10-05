@@ -8,11 +8,11 @@ namespace sensoresapp.Utils
     public class ClaseSensor
     {
         //01- Creo una clase para devolver a la view y que sea mas facil la lectura
-            public int id { get; set; }
-            public string fechalectura { get; set; }
-            public int temperatura { get; set; }
-            public int humedad { get; set; }
-            public double amoniaco { get; set; }
-            public int id_sensor { get; set; }
+        public int id { get; set; }
+        public string ip { get; set; }
+        public string puerto { get; set; }
+        public string mac { get; set; }
+        public string ubicacion { get; set; }
+        public string refresco  { get; set; }
     }
 }

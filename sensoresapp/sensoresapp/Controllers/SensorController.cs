@@ -13,9 +13,24 @@ namespace sensoresapp.Controllers
 {
     public class SensorController : Controller
     {
-        // GET: Sensor
         [Authorize]
         public ActionResult Index()
+        {
+            //ViewBag.resultado = null;
+
+            ////Obtener sensores
+            DataTable sensores = API.getSensores();
+
+            ViewBag.resultado = Utilities.ConvertirALista(sensores);
+            ////Popular ddl
+            //ViewBag.SensoresDDL = Utilities.LlenarDropDownList(sensores);
+
+            return View();
+        }
+
+        // GET: Sensor
+        [Authorize]
+        public ActionResult Buscador()
         {
             ViewBag.resultado = null;
 
@@ -28,26 +43,10 @@ namespace sensoresapp.Controllers
             return View();
         }
 
-
-
-        // GET: Sensor/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Sensor/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-
-
         // POST: Sensor/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(Sensor parametrosBusqueda)
+        public ActionResult Buscador(Sensor parametrosBusqueda)
         {
             ViewBag.resultado = null;
 
@@ -55,7 +54,7 @@ namespace sensoresapp.Controllers
             ViewBag.resultado = API.BuscarRegistros(parametrosBusqueda);
 
             //Obtengo cantidad de resultados
-            var cantidadderesultados = (ViewBag.resultado as List<ClaseSensor>).Count; 
+            var cantidadderesultados = (ViewBag.resultado as List<ClaseSensorRegistro>).Count;
             //Verifico la cantidad de resultados
             if (cantidadderesultados > 0)
             {
@@ -76,6 +75,47 @@ namespace sensoresapp.Controllers
 
             return View();
         }
+
+
+        public ActionResult Editar(int id)
+        {
+            ViewBag.IdSensor = id;
+
+            sensoresapp.Utils.ClaseSensor hola = new ClaseSensor();
+            hola.id = 1;
+            hola.ip = "127.0.0.1";
+            hola.mac = "127.0.0.2";
+            hola.puerto = "127";
+            hola.refresco = "1000";
+            hola.ubicacion = "12425454,5314231";
+
+            return View(hola);
+        }
+
+        // GET: Sensor/Details/5
+        public ActionResult Detalle(int id)
+        {
+            ViewBag.IdSensor = id;
+
+            return View();
+        }
+
+
+        // GET: Sensor/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: Sensor/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+
+
+
 
 
 

@@ -22,6 +22,25 @@ namespace sensoresapp.Utils
             return respuesta;
         }
 
+        internal static List<ClaseSensor> ConvertirALista(DataTable sensores)
+        {
+            List<ClaseSensor> _sensores = new List<ClaseSensor>();
+
+            foreach (DataRow item in sensores.Rows)
+            {
+                var itemsensor = new ClaseSensor();
+                itemsensor.id = Convert.ToInt32(item["id"]);
+                itemsensor.ip = item["ip"].ToString();
+                itemsensor.puerto = item["puerto"].ToString();
+                itemsensor.mac = item["mac"].ToString();
+                itemsensor.ubicacion = item["ubicacion"].ToString();
+                itemsensor.refresco = item["refresco"].ToString();
+                _sensores.Add(itemsensor);
+            }
+
+            return _sensores;
+        }
+
         /// <summary>
         /// Devuelve una lista de la tabla enviada como parametro
         /// </summary>
