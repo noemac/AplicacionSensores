@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using sensoresapp.Utils;
+using Newtonsoft.Json;
 
 namespace sensoresapp.Controllers
 {
@@ -20,6 +21,22 @@ namespace sensoresapp.Controllers
 
             ////Obtener sensores
             DataTable sensores = API.getSensores();
+
+            /*trabajandon con JSON linq Generic*/
+
+            var reqUsers = from item in sensores.AsEnumerable()
+                           select new 
+                           {
+                               id = item["id"],
+                               PlaceName = "Sensor" + item["id"],
+                               GeoLong = "-34.6386472",
+                               GeoLat = "-58.4017069"
+                           };
+
+
+
+
+            ViewBag.Ubicaciones = JsonConvert.SerializeObject(reqUsers); 
 
             ViewBag.resultado = Utilities.ConvertirALista(sensores);
             ////Popular ddl
