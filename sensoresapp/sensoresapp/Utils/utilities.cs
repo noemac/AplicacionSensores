@@ -41,6 +41,18 @@ namespace sensoresapp.Utils
             return _sensores;
         }
 
+        public static string ObtenerGeoLat(string coordenadas)
+        {
+            var arrayCoordenadas = coordenadas.Split(',');
+            return arrayCoordenadas[0];
+        }
+
+        public static object ObtenerGeoLong(string coordenadas)
+        {
+            var arrayCoordenadas = coordenadas.Split(',');
+            return arrayCoordenadas[1];
+        }
+
         /// <summary>
         /// Devuelve una lista de la tabla enviada como parametro
         /// </summary>

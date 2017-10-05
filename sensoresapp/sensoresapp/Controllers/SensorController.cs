@@ -25,12 +25,12 @@ namespace sensoresapp.Controllers
             /*trabajandon con JSON linq Generic*/
 
             var reqUsers = from item in sensores.AsEnumerable()
-                           select new 
+                           select new
                            {
                                id = item["id"],
                                PlaceName = "Sensor" + item["id"],
-                               GeoLong = "-34.6386472",
-                               GeoLat = "-58.4017069"
+                               GeoLong = Utilities.ObtenerGeoLong(item["ubicacion"].ToString()),
+                               GeoLat = Utilities.ObtenerGeoLat(item["ubicacion"].ToString())
                            };
 
 
