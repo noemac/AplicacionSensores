@@ -3,58 +3,146 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using sensoresapp.Models;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using sensoresapp.Utils;
+using Newtonsoft.Json;
 
 namespace sensoresapp.Controllers
 {
     public class SensorController : Controller
     {
-        // GET: Sensor
         [Authorize]
-        public async System.Threading.Tasks.Task<ActionResult> Index()
+        public ActionResult Index()
         {
-            #region listar sensores en grilla directamente
-            // URL: http://techfunda.com/howto/305/consuming-external-web-api-in-asp-net-mvc
-            string url = "http://192.168.0.173:8080/granja/sensores";
+            //ViewBag.resultado = null;
 
-            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
-            {
-                client.BaseAddress = new Uri(url);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new
-System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            ////Obtener sensores
+            DataTable sensores = API.getSensores();
 
-                System.Net.Http.HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    var data = await response.Content.ReadAsStringAsync();
-                    var table =
-Newtonsoft.Json.JsonConvert.DeserializeObject<System.Data.DataTable>(data);
+            /*trabajar con JSON linq Generic*/
 
-                    var jsonPuro = data;
+            var reqUsers = from item in sensores.AsEnumerable()
+                           select new
+                           {
+                               Id = item["id"],
+                               PlaceName = "Sensor" + item["id"],
+                               GeoLong = Utilities.ObtenerGeoLong(item["ubicacion"].ToString()),
+                               GeoLat = Utilities.ObtenerGeoLat(item["ubicacion"].ToString())
+                           };
 
 
-                    System.Web.UI.WebControls.GridView gView = new
-System.Web.UI.WebControls.GridView();
-                    gView.DataSource = table;
-                    gView.DataBind();
-                    using (System.IO.StringWriter sw = new System.IO.StringWriter())
-                    {
-                        using (System.Web.UI.HtmlTextWriter htw = new
-    System.Web.UI.HtmlTextWriter(sw))
-                        {
-                            gView.RenderControl(htw);
-                            ViewBag.noelia = "hola mundo";
-                            ViewBag.GridViewString = sw.ToString();
-                        }
-                    }
-                }
-            }
 
-            /**/
-            #endregion
+
+            ViewBag.Ubicaciones = JsonConvert.SerializeObject(reqUsers); 
+
+            ViewBag.resultado = Utilities.ConvertirALista(sensores);
+            ////Popular ddl
+            //ViewBag.SensoresDDL = Utilities.LlenarDropDownList(sensores);
 
             return View();
         }
+
+        // GET: Sensor
+        [Authorize]
+        public ActionResult Buscador()
+        {
+            ViewBag.resultado = null;
+
+            //Obtener sensores
+            DataTable sensores = API.getSensores();
+
+            //Popular ddl
+            ViewBag.SensoresDDL = Utilities.LlenarDropDownList(sensores);
+
+            return View();
+        }
+
+        // POST: Sensor/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Buscador(Sensor parametrosBusqueda)
+        {
+            ViewBag.resultado = null;
+
+            //Buscamos los registros
+            ViewBag.resultado = API.BuscarRegistros(parametrosBusqueda);
+
+            //Obtengo cantidad de resultados
+            var cantidadderesultados = (ViewBag.resultado as List<ClaseSensorRegistro>).Count;
+            //Verifico la cantidad de resultados
+            if (cantidadderesultados > 0)
+            {
+                ViewBag.CantidadResultados = "<h3>Cantidad de Resultados: " + cantidadderesultados + "</h3>";
+            }
+            else
+            {
+                ViewBag.resultado = null; // Para ocultar tabla en view
+                ViewBag.Mensaje = "Sin Resultados";
+            }
+
+
+            //Obtener sensores
+            DataTable sensores = API.getSensores();
+
+            //Cargar dropdownlist
+            ViewBag.SensoresDDL = Utilities.LlenarDropDownList(sensores);
+
+            return View();
+        }
+
+
+        public ActionResult Editar(int id)
+        {
+            ViewBag.IdSensor = id;
+            ViewBag.Actualizo = false;
+            ViewBag.Mensaje = string.Empty;
+
+            ClaseSensor sensorSeleccionado = API.getSensoresPorId(id);
+
+            return View(sensorSeleccionado);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(ClaseSensor model, string returnUrl)
+        {
+            returnUrl = null;
+
+            if (ModelState.IsValid)
+            {
+                bool PudoActualizar = API.ActualizarSensor(model);
+                if (PudoActualizar)
+                {
+                    ViewBag.Actualizo = true;
+                    ViewBag.Mensaje = "Actualizó Correctamente, Presione Volver a lista";
+                }
+            }
+
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+
+
+
+        }
+
+        // GET: Sensor/Details/5
+        public ActionResult Detalle(int id)
+        {
+
+            ViewBag.IdSensor = id;
+            ViewBag.Actualizo = false;
+            ViewBag.Mensaje = string.Empty;
+
+            ClaseSensor sensorSeleccionado = API.getSensoresPorId(id);
+
+            return View(sensorSeleccionado);;
+        }
+
 
         // GET: Sensor/Details/5
         public ActionResult Details(int id)
@@ -68,21 +156,13 @@ System.Web.UI.WebControls.GridView();
             return View();
         }
 
-        // POST: Sensor/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+
+
+
+
+
+
 
         // GET: Sensor/Edit/5
         public ActionResult Edit(int id)
