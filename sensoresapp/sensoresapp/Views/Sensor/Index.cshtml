@@ -103,9 +103,9 @@
                 <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>
             </div>
         </div>
-        <div class="col-md-12">
-            @Html.ActionLink("Ir a Buscador", "Buscador", "Sensor")
-        </div>
+        <div class="col-md-7 col-md-offset-5">
+          <button class="text-center">  @Html.ActionLink("Ir a Buscador", "Buscador", "Sensor")</button>
+        </div><br />
     </div>
 
     <div class="row">
@@ -138,7 +138,7 @@
 
         // These are options that set initial zoom level, where the map is centered globally to start, and the type of map to show
         var mapOptions = {
-            zoom: 8,
+            zoom: 12,
             center: Tunisie,
             mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
         };

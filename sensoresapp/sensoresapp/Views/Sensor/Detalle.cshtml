@@ -3,58 +3,87 @@
 @{
     ViewBag.Title = "Detalle";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    TempData.Keep("Id");    /*Para que al refrescar no pierda el id*/
 }
 
-<h2>Detalle</h2>
+<div class="container">
 
-<div>
-    <h4>Detalle Sensor @Html.Raw(ViewBag.IdSensor)</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ip)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ip)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.puerto)
-        </dt>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Detalle</h2>
+            <h4> Sensor @Html.Raw(ViewBag.IdSensor)</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ip)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.puerto)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.ip)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.mac)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.puerto)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.mac)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.puerto)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ubicacion)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.mac)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ubicacion)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.mac)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.refresco)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ubicacion)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.refresco)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.ubicacion)
+                </dd>
 
-    </dl>
+                <dt>
+                    @Html.DisplayNameFor(model => model.refresco)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.refresco)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="row">
+        <hr />
+        <div class="col-md-12 text-center">
+            <p>
+                <div>
+                    <button>    @Html.ActionLink("Editar", "Editar", new { id = Model.id })</button>
+                    <button>  @Html.ActionLink("Volver a Lista", "Index")</button>
+                </div>
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4  text-center">
+            <h3>Temperatura</h3>
+        </div>
+        <div class="col-md-4  text-center">
+            <h3>Humedad</h3>
+
+        </div>
+        <div class="col-md-4  text-center">
+            <h3>Amoniaco</h3>
+        </div>
+    </div>
+
+
 </div>
-<p>
-    @Html.ActionLink("Editar", "Editar", new { id = Model.id }) |
-    @Html.ActionLink("Volver a Lista", "Index")
-</p>
-

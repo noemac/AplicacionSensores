@@ -22,7 +22,7 @@ namespace sensoresapp.Controllers
             ////Obtener sensores
             DataTable sensores = API.getSensores();
 
-            /*trabajandon con JSON linq Generic*/
+            /*trabajar con JSON linq Generic*/
 
             var reqUsers = from item in sensores.AsEnumerable()
                            select new
