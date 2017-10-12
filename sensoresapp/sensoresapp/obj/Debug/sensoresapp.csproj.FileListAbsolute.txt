@@ -393,3 +393,4 @@ C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debu
 C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
 C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
 C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
+C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
