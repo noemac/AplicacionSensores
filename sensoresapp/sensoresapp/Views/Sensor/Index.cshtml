@@ -86,7 +86,7 @@
                                                 @item.refresco
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Editar", "Editar","Sensor", new { id = @item.id }, null)
+                                                @Html.ActionLink("ABM", "Editar","Sensor", new { id = @item.id }, null)
                                             </td>
                                             <td>
                                                 @Html.ActionLink("Detalle", "Detalle", "Sensor", new { id = @item.id }, null)
@@ -103,12 +103,11 @@
                 <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>
             </div>
         </div>
-        <div class="col-md-7 col-md-offset-5">
-          <button class="text-center">  @Html.ActionLink("Ir a Buscador", "Buscador", "Sensor")</button>
+        <div class="col-lg-offset-6 col-md-6"> 
+            <button class="text-center">  @Html.ActionLink("Ir a Buscador", "Buscador", "Sensor")</button> 
         </div>
-        
-    </div>
-    <br/>
+    </div><br/>
+
     <div class="row">
         <div class="col-md-12">
             <!-- This is the div that will contain the Google Map -->
@@ -117,14 +116,13 @@
         </div>
     </div>
 </div>
+
 <!-- Enclose the Javascript in a "section" so that it is rendered in the correct order after scripts have been loaded etc -->
 @section scripts {
     <section class="scripts">
 
         <script type="text/javascript">
-
-
-    @*<!-- This code tells the browser to execute the "Initialize" method only when the complete document model has been loaded. -->*@
+@*<!-- This code tells the browser to execute the "Initialize" method only when the complete document model has been loaded. -->*@
     $(document).ready(function () {
         Initialize();
     });
@@ -148,22 +146,23 @@
         var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
             debugger;
+        //tengo que tomar los parametros convertidos en array. "parse"
             var data = $.parseJSON(@(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Ubicaciones))))
-        // a sample list of JSON encoded data of places to visit in Tunisia
-        // you can either make up a JSON list server side, or call it from a controller using JSONResult
-        //var dataOrignal = [
-        //          { "Id": 1, "PlaceName": "Zaghouan", "GeoLong": "36.401081", "GeoLat": "10.16596" },
-        //          { "Id": 2, "PlaceName": "Hammamet ", "GeoLong": "36.4", "GeoLat": "10.616667" },
-        //          { "Id": 3, "PlaceName": "Sousse", "GeoLong": "35.8329809", "GeoLat": "10.63875" },
-        //          { "Id": 4, "PlaceName": "Sfax", "GeoLong": "34.745159", "GeoLat": "10.7613" }
-        //       ];
+            // a sample list of JSON encoded data of places to visit in Tunisia
+            // you can either make up a JSON list server side, or call it from a controller using JSONResult
+            //var dataOrignal = [
+            //          { "Id": 1, "PlaceName": "Zaghouan", "GeoLong": "36.401081", "GeoLat": "10.16596" },
+            //          { "Id": 2, "PlaceName": "Hammamet ", "GeoLong": "36.4", "GeoLat": "10.616667" },
+            //          { "Id": 3, "PlaceName": "Sousse", "GeoLong": "35.8329809", "GeoLat": "10.63875" },
+            //          { "Id": 4, "PlaceName": "Sfax", "GeoLong": "34.745159", "GeoLat": "10.7613" }
+            //       ];
 
-        // Using the JQuery "each" selector to iterate through the JSON list and drop marker pins
-        $.each(data, function (i, item) {
+            // Using the JQuery "each" selector to iterate through the JSON list and drop marker pins
+            $.each(data, function (i, item) {
             var marker = new google.maps.Marker({
-                'position': new google.maps.LatLng(item.GeoLong, item.GeoLat),
-                'map': map,
-                'title': item.PlaceName
+            'position': new google.maps.LatLng(item.GeoLong, item.GeoLat),
+            'map': map,
+            'title': item.PlaceName
             });
 
             // Make the marker-pin blue!
@@ -172,19 +171,19 @@
             // put in some information about each json object - in this case, the opening hours.
             debugger;
             var infowindow = new google.maps.InfoWindow({
-                content: "<div class='infoDiv'><h2><a href='Detalle/" + item.Id +"'>" +   item.PlaceName + "</a></div></div>"
+            content: "<div class='infoDiv'><h2><a href='Detalle/" + item.Id +"'>" +   item.PlaceName + "</a></div></div>"
             });
 
             // finally hook up an "OnClick" listener to the map so it pops up out info-window when the marker-pin is clicked!
             google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
+            infowindow.open(map, marker);
             });
 
-        })
-    }
+            })
+            }
 
 
-        </script>
-    </section>
+            </script>
+            </section>
 }
  

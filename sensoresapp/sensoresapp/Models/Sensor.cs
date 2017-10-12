@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace sensoresapp.Models
 {
-    public class Sensor
+    public class Sensor  ///--> parametros de fechas
     {
         [Display(Name = "Id")]
         public int Id { get; set; }

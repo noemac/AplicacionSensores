@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "GraficoHistorico";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel="stylesheet" href="~/css/Sitio.css">
+
+<html>
+<head>
+    <style>
+
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+
+</head>
+<body>
+
+    <p>Seleccione opción:</p>
+    <div class="container">
+        <div class="row">
+            <div class="tab">
+                <button class="tablinks" onclick="abrirGrafico(event, 1)" id="defaultOpen">Humedad</button>
+                <button class="tablinks" onclick="abrirGrafico(event, 2)">Temperatura</button>
+                <button class="tablinks" onclick="abrirGrafico(event, 3)">Amoniaco</button>
+            </div>
+
+            <div id="divContenedorDeGrafico">
+
+            </div>
+
+                @*<div id="Humedad" class="tabcontent">
+            <canvas id="barChartHumedad"></canvas>
+        </div>
+
+        <div id="Temperatura" class="tabcontent">
+
+            <canvas id="barChartTemperatura"></canvas>
+            <p></p>
+        </div>
+
+        <div id="Amoniaco" class="tabcontent">
+
+            <canvas id="barChartAmoniaco"></canvas>
+            <p></p>
+        </div>
+
+    <div>*@
+        </div>
+    </div>
+    <script>
+
+            function abrirGrafico(evt, graficoId) {
+                var i, tablinks;
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                evt.currentTarget.className += " active";
+
+                //TODO: Llamar a vistas
+                //1: Humedad
+                //2: Temperatura
+                //3: Amoniaco
+
+                switch (graficoId) {
+                    case 1:
+                        $.ajax({
+                            type: "GET",
+                            url: "/Sensor/ObtenerGrafico/1",
+                            success: function (result) {
+                                $('#divContenedorDeGrafico').html(result);
+                                CargarReferenciaGraficos();
+                            },
+                            error: function (xhr, status) {
+                                alert(status);
+                            }
+                        });
+
+                        break;
+                    case 2:
+                        $.ajax({
+                            type: "GET",
+                            url: "/Sensor/ObtenerGrafico/2",
+                            success: function (result) {
+                                $('#divContenedorDeGrafico').html(result);
+                                CargarReferenciaGraficos();
+                            },
+                            error: function (xhr, status) {
+                                alert(status);
+                            }
+                        });
+                        break;
+                    case 3:
+                        $.ajax({
+                            type: "GET",
+                            url: "/Sensor/ObtenerGrafico/3",
+                            success: function (result) {
+                                $('#divContenedorDeGrafico').html(result);
+                                CargarReferenciaGraficos();
+                            },
+                            error: function (xhr, status) {
+                                alert(status);
+                            }
+                        });
+                        break;
+                }
+
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        
+    </script>
+    @*<div>
+            <button> @Html.ActionLink("Volver a lista", "Index") </button>
+        </div>*@
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js'></script>
+    <script src="~/Scripts/Grafico.js"></script>
+</body>
+</html>

@@ -43,7 +43,7 @@ namespace sensoresapp.Utils
 
         public static string ObtenerGeoLat(string coordenadas)
         {
-            var arrayCoordenadas = coordenadas.Split(',');
+            var arrayCoordenadas = coordenadas.Split(',');//las cordenadas que me tre de json las divido y tomo posicion invertida.
             return arrayCoordenadas[1];
         }
 

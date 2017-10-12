@@ -277,18 +277,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
-    <Content Include="Scripts\GraficoChart.js" />
-    <Content Include="Scripts\jquery-3.2.1.js" />
-    <Content Include="Scripts\jquery-3.2.1.min.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.2.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\Grafico.js" />
+    <Content Include="Scripts\GraficoHumedad.js" />
+    <Content Include="Scripts\GraficoTemperatura.js" />
+    <Content Include="Scripts\GraficoAmoniaco.js" />
     <Content Include="Scripts\i18n\jquery-ui-timepicker-addon-i18n.js" />
     <Content Include="Scripts\i18n\jquery-ui-timepicker-addon-i18n.min.js" />
     <Content Include="Scripts\i18n\jquery-ui-timepicker-af.js" />
@@ -392,6 +385,19 @@
     <Content Include="Views\Sensor\Buscador.cshtml" />
     <Content Include="Views\Sensor\Detalle.cshtml" />
     <Content Include="Views\Sensor\Editar.cshtml" />
+    <Content Include="Views\Sensor\Humedad.cshtml" />
+    <Content Include="Views\Sensor\Amoniaco.cshtml" />
+    <Content Include="Views\Sensor\Temperatura.cshtml" />
+    <Content Include="Views\Sensor\GraficoVivo.cshtml" />
+    <Content Include="Views\Sensor\Create.cshtml" />
+    <Content Include="Views\Sensor\Eliminar.cshtml" />
+    <Content Include="Views\Sensor\GraficoHistorico.cshtml" />
+    <Content Include="Views\Shared\_Humedad.cshtml" />
+    <Content Include="Views\Shared\_Amoniaco.cshtml" />
+    <Content Include="Views\Shared\_Temperatura.cshtml" />
+    <Content Include="Views\Shared\_GraficoHistorico.cshtml" />
+    <Content Include="Views\Shared\_ABM.cshtml" />
+    <Content Include="Views\Shared\_Editor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

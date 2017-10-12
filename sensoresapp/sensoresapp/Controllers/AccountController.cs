@@ -73,11 +73,11 @@ namespace sensoresapp.Controllers
                         var data = await response.Content.ReadAsStringAsync();
 
                         dynamic results = JsonConvert.DeserializeObject<dynamic>(data);
-                        var id = Convert.ToInt32(results.id);
+                        var id = Convert.ToInt32(results.id); //el id es traido en formato json y se convierte en int.
                         var name = Convert.ToString(results.userName);
 
                         usuarioId = id;
-                        LoginCorrecto = true;
+                        LoginCorrecto = true; 
                     }
                 }
                 #endregion
@@ -163,7 +163,7 @@ namespace sensoresapp.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Sensor");
+                return RedirectToAction("GraficoVivo", "Sensor");
             }
         }
 

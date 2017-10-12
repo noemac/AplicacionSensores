@@ -45,9 +45,6 @@ namespace sensoresapp.Utils
                     var jsonPuro = data;
                 }
             }
-            /*cambio el orden en que se muestran los sensores*/
-            DataRow[] dataRows = table.Select().OrderBy(u => u["id"]).ToArray(); //de dataRow a data Table.
-            table = dataRows.CopyToDataTable();
 
             return table;
         }

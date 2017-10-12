@@ -1,0 +1,97 @@
+﻿@model sensoresapp.Utils.ClaseSensor
+
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel="stylesheet" href="~/css/Sitio.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Detalle</h2>
+
+            <div>
+                <h4> Sensor @Html.Raw(ViewBag.IdSensor)</h4>           
+           
+                   
+                        <dl class="dl-horizontal table-bordered">
+                         
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ip)
+                            </dt>
+                    
+                    <dd>
+                        @Html.DisplayFor(model => model.ip)
+                    </dd>
+                    
+                    <dt>
+                        @Html.DisplayNameFor(model => model.puerto)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.puerto)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.mac)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.mac)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ubicacion)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ubicacion)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.refresco)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.refresco)
+                    </dd>
+
+                    </dl>
+               </div>
+           </div>
+            <div  class="btn-group">
+                <p>
+                   
+                    <button type="button">
+                        @Html.ActionLink("Volver a Lista", "Index")
+                        </button>
+                      </p>
+            </div>
+        </div>
+    </div>
+  @*graficos*@
+<div class="row">
+    <div class="col-md-4  text-center">
+        <h3>Temperatura</h3>
+        <canvas id="barChartTemperatura"></canvas>
+
+    </div>
+    <div class="col-md-4  text-center">
+        <h3>Humedad</h3>
+        <canvas id="barChartHumedad"></canvas>
+    </div>
+    <div class="col-md-4  text-center">
+        <h3>Amoniaco</h3>
+        <canvas id="barChartAmoniaco"></canvas>
+    </div>
+</div>
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js'></script>
+<script src="~/Scripts/GraficoChart.js"></script>
+<script src="~/Scripts/Grafico.js"></script>
+

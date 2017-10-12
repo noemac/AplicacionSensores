@@ -15,69 +15,57 @@
 
 
 <div class="container">
-    @*<div class="jumbotron">*@
-        <div class="row">
-            <Legend> Criterios de búsqueda</Legend>
-        </div>
-        <div class="row grilla-centrada">
-            @using (Html.BeginForm("Buscador", "Sensor", FormMethod.Post, new { encType = "multipart/form-data", id = "myform", name = "myform", @class = "form-inline" }))
-            {
-                @Html.AntiForgeryToken()
+    <div class="row">
+        <Legend> Criterios de búsqueda</Legend>
+    </div>
+    <div class="row grilla-centrada">
+        @using (Html.BeginForm("Buscador", "Sensor", FormMethod.Post, new { encType = "multipart/form-data", id = "myform", name = "myform", @class = "form-inline" }))
+        {
+            @Html.AntiForgeryToken()
 
-                //@ViewBag.listado
+            //@ViewBag.listado
 
-                <fieldset>
+            <fieldset>
 
-                    <div class="form-group form-group-custom">
-                        @Html.Label("Id", "Sensor:")
+                <div class="form-group form-group-custom">
+                    @Html.Label("Id", "Sensor:")
 
-                        @*Se vincula el drowdownlist con el modelo*@
-                        @Html.DropDownListFor(model => model.Id, ViewBag.SensoresDDL as SelectList, new { @class = "form-control" })
-                    </div>
-                    <div class="form-group form-group-custom">
-                        @Html.Label("minHijos", "Fecha desde:")
-                        @Html.EditorFor(model => model.FechaDesde,
+                    @*Se vincula el drowdownlist con el modelo*@
+                    @Html.DropDownListFor(model => model.Id, ViewBag.SensoresDDL as SelectList, new { @class = "form-control" })
+                </div>
+                <div class="form-group form-group-custom">
+                    @Html.Label("minHijos", "Fecha desde:")
+                    @Html.EditorFor(model => model.FechaDesde,
         new { htmlAttributes = new { @class = "date-time-picker form-control", @id = "minHijos" } })
-                        <br />
-                        @Html.ValidationMessageFor(x => x.FechaDesde, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="form-group form-group-custom">
-                        @Html.Label("maxHijos", "Fecha hasta:")
-                        @Html.EditorFor(model => model.FechaHasta,
+                    <br />
+                    @Html.ValidationMessageFor(x => x.FechaDesde, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-custom">
+                    @Html.Label("maxHijos", "Fecha hasta:")
+                    @Html.EditorFor(model => model.FechaHasta,
         new { htmlAttributes = new { @class = "date-time-picker form-control", @id = "maxHijos" } })
-                        <br />
-                        @Html.ValidationMessageFor(x => x.FechaHasta, "", new { @class = "text-danger" })@*--> trabaja con la validacion del modelo*@
-                    </div>
-                    <div class="form-group form-group-custom">
-                        <input type="submit" value="Buscar" class="btn btn-info btn-buscar" />
-                    </div>
-           <div>          
-               <button>@Html.ActionLink("Volver", "index", "Sensor")</button>
-           </div>
-           </fieldset>
-
-                
-                   
-
-                 
+                    <br />
+                    @Html.ValidationMessageFor(x => x.FechaHasta, "", new { @class = "text-danger" })@*--> trabaja con la validacion del modelo*@
+                </div>
+                <div class="form-group form-group-custom">
+                    <input type="submit" value="Buscar" class="btn btn-default btn-buscar" />
+                </div>
+            </fieldset>
 
 
-
-                    @*@Html.EditorFor(model => model.Id,
+            @*@Html.EditorFor(model => model.Id,
                 new { htmlAttributes = new { @id = "id" } })*@
 
 
-            }
-        </div>
+        }
+    </div>
 </div>
-    @*</div>*@
 <br />
 
 
 
 <div class="container">
-    
-    <div class="row ">
+    <div class="row">
         <div class="col-md-12 text-center">
 
             @*<div id="divProcessing">
@@ -154,7 +142,7 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
-    <script src="~/Scripts/jquery-ui-timepicker-addon.min.js"></script>
+    <script src="~/Scripts/jquery-ui-timepicker-addon.min.js"></script>7
     @*como tiene dependencia de jquery va despues de la misma.*@
     @*@referencia de loading link=https://gasparesganga.com/labs/jquery-loading-overlay/#quick-demo*@
     <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.3/src/loadingoverlay.min.js"></script>
@@ -171,7 +159,7 @@
                     controlType: 'select',
                     timeFormat: 'hh:mm TT',
                     showOn: 'both',
-                    buttonText: '<i class="glyphicon glyphicon-calendar"></i>'
+                    buttonText:'<i class="glyphicon glyphicon-calendar"></i>'
 
                 });
             });
@@ -188,9 +176,8 @@
                 }
             });
         });
-    </script>
-  }
-        
 
+    </script>
+}
 
 

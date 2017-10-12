@@ -14,6 +14,86 @@ namespace sensoresapp.Controllers
 {
     public class SensorController : Controller
     {
+
+        public ActionResult ABM()
+        {
+
+            return View();
+        }
+    //    public ActionResult Index()
+    //    {
+
+        //        var sensoresItem = new SensoresItem()
+
+        //        {
+
+        //            Id = item["id"],
+        //            Nombre = "",
+        //            Ubicacion = "",
+        // };
+        //    viewBag.Sensores = sensores;
+        // return View();
+        //}
+
+        //private bool button1WasClicked = false;
+
+        //        private void button1_Click(object sender, EventArgs e)
+        //        {
+        //            button1WasClicked = true;
+        //        }
+
+        //        private void button2_Click(object sender, EventArgs e)
+        //        {
+        //            if (textBox2.Text == textBox3.Text && button1WasClicked)
+        //            {
+        //                StreamWriter myWriter = File.CreateText(@"c:\Program Files\text.txt");
+        //                myWriter.WriteLine(textBox1.Text);
+        //                myWriter.WriteLine(textBox2.Text);
+        //                button1WasClicked = false;
+        //            }
+        //        }
+
+        public ActionResult GraficoHistorico()
+        {
+            return View();
+        }
+
+        public PartialViewResult ObtenerGrafico(int id)
+        {
+            var nombreDePartialView = string.Empty;
+
+            switch (id)
+            {
+                case 1:
+                    nombreDePartialView = "~/Views/Shared/_Humedad.cshtml";
+                    break;
+                case 2:
+                     nombreDePartialView = "~/Views/Shared/_Temperatura.cshtml";
+                    break;
+                case 3:
+                    nombreDePartialView = "~/Views/Shared/_Amoniaco.cshtml";
+                    break;
+            }
+            return PartialView(nombreDePartialView);
+        }
+
+        public ActionResult GraficoVivo()
+        {
+            return View();
+        }
+        public ActionResult Humedad()
+        {
+            return View();
+        }
+        public ActionResult Amoniaco()
+        {
+            return View();
+        }
+        public ActionResult Temperatura()
+        {
+            return View();
+        }
+
         [Authorize]
         public ActionResult Index()
         {
@@ -22,7 +102,7 @@ namespace sensoresapp.Controllers
             ////Obtener sensores
             DataTable sensores = API.getSensores();
 
-            /*trabajar con JSON linq Generic*/
+            /*trabajandon con JSON linq Generic*/
 
             var reqUsers = from item in sensores.AsEnumerable()
                            select new
@@ -140,7 +220,7 @@ namespace sensoresapp.Controllers
 
             ClaseSensor sensorSeleccionado = API.getSensoresPorId(id);
 
-            return View(sensorSeleccionado);;
+            return View(sensorSeleccionado);
         }
 
 
@@ -151,8 +231,13 @@ namespace sensoresapp.Controllers
         }
 
         // GET: Sensor/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
+            ViewBag.IdSensor = "";
+            ViewBag.Creo = false;
+            ViewBag.Mensaje = string.Empty;
+
+
             return View();
         }
 
@@ -163,9 +248,8 @@ namespace sensoresapp.Controllers
 
 
 
-
-        // GET: Sensor/Edit/5
-        public ActionResult Edit(int id)
+            // GET: Sensor/Edit/5
+            public ActionResult Edit(int id)
         {
             return View();
         }
@@ -187,10 +271,14 @@ namespace sensoresapp.Controllers
         }
 
         // GET: Sensor/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Eliminar(int id)
         {
+            ViewBag.IdSensor = id;
+            ViewBag.Elimino = false;
+            ViewBag.Mensaje = string.Empty;
             return View();
         }
+
 
         // POST: Sensor/Delete/5
         [HttpPost]

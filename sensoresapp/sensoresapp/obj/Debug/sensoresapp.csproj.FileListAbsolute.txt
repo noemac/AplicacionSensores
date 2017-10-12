@@ -96,4 +96,300 @@ C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Secu
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csproj.CoreCompileInputs.cache
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
 C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
-C:\Machuca\AplicacionSensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\ApplicationInsights.config
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\sensoresapp.dll.config
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\sensoresapp.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\sensoresapp.pdb
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Antlr3.Runtime.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\EntityFramework.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Newtonsoft.Json.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Owin.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Helpers.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Http.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Mvc.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Optimization.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Razor.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\WebGrease.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Helpers.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Mvc.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Optimization.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Razor.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Antlr3.Runtime.pdb
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Newtonsoft.Json.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Http.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\EntityFramework.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.xml
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Helpers.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Mvc.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Optimization.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Razor.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Http.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\EntityFramework.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csproj.CoreCompileInputs.cache
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
+C:\Users\GyL\Desktop\sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\ApplicationInsights.config
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\sensoresapp.dll.config
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\sensoresapp.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\sensoresapp.pdb
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Antlr3.Runtime.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\EntityFramework.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Newtonsoft.Json.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Owin.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Helpers.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Http.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Mvc.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Optimization.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Razor.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\WebGrease.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Helpers.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Mvc.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Optimization.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Razor.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Antlr3.Runtime.pdb
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Newtonsoft.Json.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Http.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\EntityFramework.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.xml
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Helpers.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Mvc.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Optimization.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Razor.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Http.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\EntityFramework.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csproj.CoreCompileInputs.cache
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
+C:\Users\GyL\Desktop\Aplicacion sensores\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\ApplicationInsights.config
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\sensoresapp.dll.config
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\sensoresapp.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\sensoresapp.pdb
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Antlr3.Runtime.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\EntityFramework.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Web.Infrastructure.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Newtonsoft.Json.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Owin.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Helpers.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Http.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Mvc.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Optimization.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Razor.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\WebGrease.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Helpers.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Mvc.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Optimization.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Razor.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.Deployment.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.WebPages.Razor.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Antlr3.Runtime.pdb
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Newtonsoft.Json.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Net.Http.Formatting.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Http.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\System.Web.Http.WebHost.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\EntityFramework.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\EntityFramework.SqlServer.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Google.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.ApplicationInsights.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.DependencyCollector.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.WindowsServer.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\Microsoft.AI.Web.xml
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Helpers.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Mvc.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Optimization.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Razor.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Net.Http.Formatting.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Http.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\System.Web.Http.WebHost.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\EntityFramework.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\EntityFramework.SqlServer.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csproj.CoreCompileInputs.cache
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.dll
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.pdb
+C:\GIT\huevo\07_Construccion\web\SensoresGranja\sensoresapp\sensoresapp\obj\Debug\sensoresapp.csprojResolveAssemblyReference.cache

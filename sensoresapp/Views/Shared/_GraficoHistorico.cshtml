@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "GraficoHistorico";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel="stylesheet" href="~/css/Sitio.css">
+
+<html>
+<head>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <p>Seleccione opción:</p>
+    <div class="container">
+        <div class="row">
+            <div class="tab">
+                <button class="tablinks" onclick="abrirGrafico(event, 1)" id="defaultOpen">Humedad</button>
+                <button class="tablinks" onclick="abrirGrafico(event, 2)">Temperatura</button>
+                <button class="tablinks" onclick="abrirGrafico(event, 3)">Amoniaco</button>
+            </div>
+
+            <div id="contenidoDePartialView">
+                @* TODO: LEVANTAR PartialView  *@
+
+
+            </div>
+            <div id="contenedorDeGrafico">
+
+
+
+                <div id="Humedad" class="tabcontent">
+                    <canvas id="barChartHumedad"></canvas>
+                </div>
+
+                <div id="Temperatura" class="tabcontent">
+
+                    <canvas id="barChartTemperatura"></canvas>
+                    <p></p>
+                </div>
+
+                <div id="Amoniaco" class="tabcontent">
+
+                    <canvas id="barChartAmoniaco"></canvas>
+                    <p></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function abrirGrafico(evt, cityName) {
+            var i, tablinks;
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+    @*<div>
+            <button> @Html.ActionLink("Volver a lista", "Index") </button>
+        </div>*@
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js'></script>
+    <script src="~/Scripts/GraficoChart.js"></script>
+    <script src="~/Scripts/Grafico.js"></script>
+</body>
+</html> 

@@ -18,14 +18,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Sensores G&L", "Index", "Sensor", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sensores G&L", "GraficoVivo", "Sensor", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                @*<ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>*@
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Sensores", "Index", "Sensor")</li>
+                    <li>@Html.ActionLink("Consulta", "Buscador", "Sensor")</li>
+                    <li>@Html.ActionLink("ABM", "Editar", "Sensor")</li>
+                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
