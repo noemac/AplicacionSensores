@@ -1,7 +1,43 @@
 ﻿<link href="~/Css/Sitio.css" rel="stylesheet" />
-<div class="row">
-    <div class="col-md-4  text-center">
-        <h2>Amoniaco</h2>
-        <canvas id="barChartAmoniaco"></canvas>
-    </div>
+
+<div id="divResultados">
+
+    @if (ViewBag.resultado != null)
+    {
+
+            <!--09- armo la tabla con los datos-->
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <tr class="success">
+                        <th>
+                            Sensores
+                        </th>
+                    </tr>
+
+                    <!--10- itero los datos listado en ViewBag.resultado-->
+                    @foreach (var item in ViewBag.resultado)
+                    {
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-12  text-center">
+                                        <h4>Amoniaco - sensor @item.id</h4>
+                                        <canvas id="barChartAmoniaco"></canvas>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+
+
+    }
+    <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>
 </div>
+
+

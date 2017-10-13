@@ -19,13 +19,15 @@
     <p>Seleccione opción:</p>
     <div class="container">
         <div class="row">
-            <div class="tab">
-                <button class="tablinks" onclick="abrirGrafico(event, 1)" id="defaultOpen">Humedad</button>
-                <button class="tablinks" onclick="abrirGrafico(event, 2)">Temperatura</button>
-                <button class="tablinks" onclick="abrirGrafico(event, 3)">Amoniaco</button>
+            <div class="col-md-4">
+                <div class="tab">
+                    <button class="tablinks" onclick="abrirGrafico(event, 1)" id="defaultOpen">Humedad</button>
+                    <button class="tablinks" onclick="abrirGrafico(event, 2)">Temperatura</button>
+                    <button class="tablinks" onclick="abrirGrafico(event, 3)">Amoniaco</button>
+                </div>
             </div>
-
-            <div id="divContenedorDeGrafico">
+            <div class="col-md-2"></div>
+            <div class="col-md-6" id="divContenedorDeGrafico">
 
             </div>
 

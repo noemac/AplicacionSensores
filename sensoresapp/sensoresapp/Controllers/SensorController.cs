@@ -24,6 +24,12 @@ namespace sensoresapp.Controllers
         {
             var nombreDePartialView = string.Empty;
 
+
+            ////Obtener sensores
+            DataTable sensores = API.getSensores();
+            ViewBag.resultado = Utilities.ConvertirALista(sensores);
+
+
             switch (id)
             {
                 case 1:

@@ -294,6 +294,7 @@ namespace sensoresapp.Utils
             }
 
             return PudoEliminar;
+
         }
     }
 }
