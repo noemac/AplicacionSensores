@@ -4,5 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Eliminar</h2>
+<div class="panel panel-info">
+    @Html.Raw(ViewBag.Mensaje)
+</div>
+<div class="col-md-12 text-center">
+    <button>   @Html.ActionLink("Volver a lista", "Index")</button>
+</div>
+
+
 

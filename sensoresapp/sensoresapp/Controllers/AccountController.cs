@@ -163,7 +163,7 @@ namespace sensoresapp.Controllers
             }
             else
             {
-                return RedirectToAction("GraficoVivo", "Sensor");
+                return RedirectToAction("GraficoHistorico", "Sensor");
             }
         }
 

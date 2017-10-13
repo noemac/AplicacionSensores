@@ -18,7 +18,6 @@
         <button>   @Html.ActionLink("Volver a lista", "Index")</button>
     </div>
 }
-
 else
 {
     using (Html.BeginForm("Editar", "Sensor", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))

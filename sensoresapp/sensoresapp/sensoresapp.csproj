@@ -389,7 +389,6 @@
     <Content Include="Views\Sensor\Amoniaco.cshtml" />
     <Content Include="Views\Sensor\Temperatura.cshtml" />
     <Content Include="Views\Sensor\GraficoVivo.cshtml" />
-    <Content Include="Views\Sensor\Create.cshtml" />
     <Content Include="Views\Sensor\Eliminar.cshtml" />
     <Content Include="Views\Sensor\GraficoHistorico.cshtml" />
     <Content Include="Views\Shared\_Humedad.cshtml" />
@@ -398,6 +397,7 @@
     <Content Include="Views\Shared\_GraficoHistorico.cshtml" />
     <Content Include="Views\Shared\_ABM.cshtml" />
     <Content Include="Views\Shared\_Editor.cshtml" />
+    <Content Include="Views\Sensor\Crear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -26,6 +26,17 @@ namespace sensoresapp.Utils
         {
             List<ClaseSensor> _sensores = new List<ClaseSensor>();
 
+            //Ordenar tabla por id
+            if (sensores.Rows.Count > 0)
+            {
+                //  Convert DataTable to DataView
+                DataView dv = sensores.DefaultView;
+                //   Sort data
+                dv.Sort = "id";
+                //   Convert back your sorted DataView to DataTable
+                sensores = dv.ToTable();
+            }
+
             foreach (DataRow item in sensores.Rows)
             {
                 var itemsensor = new ClaseSensor();

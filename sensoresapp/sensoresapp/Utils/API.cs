@@ -17,6 +17,8 @@ namespace sensoresapp.Utils
         private const string IP_SERVIDOR = "http://192.168.0.173:8080/granja/";
         private const string URL_sensores = IP_SERVIDOR + "/sensores";
         private const string URL_sensores_Update = IP_SERVIDOR + "/sensores/update";
+        private const string URL_sensores_Create = IP_SERVIDOR + "/sensores";
+        private const string URL_sensores_Delete = IP_SERVIDOR + "/sensores/";
 
 
         /// <summary>
@@ -158,6 +160,8 @@ namespace sensoresapp.Utils
             return resultadosparaview;
         }
 
+ 
+
         /// <summary>
         /// Trae sensor por id
         /// </summary>
@@ -223,6 +227,73 @@ namespace sensoresapp.Utils
             }
 
             return PudoActualizar;
+        }
+
+
+        public static bool CrearSensor(ClaseSensor model)
+        {
+            bool PudoCrear = false;
+
+            //Consultar web api, traer todos los sensors
+            string url = URL_sensores_Create;
+
+            var table = new DataTable();
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                //System.Net.Http.HttpContent itemParaActualizar = new system.Net.Http.HttpContent();
+
+
+
+                var jsonString = "{" +
+                    "\"ip\": \"" + model.ip + "\"," +
+                    "\"puerto\": " + model.puerto + "," +
+                    "\"mac\": \"" + model.mac + "\"," +
+                    "\"ubicacion\": \"" + model.ubicacion + "\"," +
+                    "\"refresco\": " + model.refresco + " " +
+                    "}";
+
+                var httpContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+                System.Net.Http.HttpResponseMessage response = client.PostAsync(url, httpContent).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PudoCrear = true;
+                }
+            }
+
+            return PudoCrear;
+        }
+
+        public static bool EliminarSensor(int id)
+        {
+            bool PudoEliminar = false;
+
+            //Consultar web api, traer todos los sensors
+            string url = URL_sensores_Delete + id;
+
+            var table = new DataTable();
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                System.Net.Http.HttpResponseMessage response = client.DeleteAsync(url).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PudoEliminar = true;
+                }
+            }
+
+            return PudoEliminar;
         }
     }
 }

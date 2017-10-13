@@ -14,45 +14,7 @@ namespace sensoresapp.Controllers
 {
     public class SensorController : Controller
     {
-
-        public ActionResult ABM()
-        {
-
-            return View();
-        }
-    //    public ActionResult Index()
-    //    {
-
-        //        var sensoresItem = new SensoresItem()
-
-        //        {
-
-        //            Id = item["id"],
-        //            Nombre = "",
-        //            Ubicacion = "",
-        // };
-        //    viewBag.Sensores = sensores;
-        // return View();
-        //}
-
-        //private bool button1WasClicked = false;
-
-        //        private void button1_Click(object sender, EventArgs e)
-        //        {
-        //            button1WasClicked = true;
-        //        }
-
-        //        private void button2_Click(object sender, EventArgs e)
-        //        {
-        //            if (textBox2.Text == textBox3.Text && button1WasClicked)
-        //            {
-        //                StreamWriter myWriter = File.CreateText(@"c:\Program Files\text.txt");
-        //                myWriter.WriteLine(textBox1.Text);
-        //                myWriter.WriteLine(textBox2.Text);
-        //                button1WasClicked = false;
-        //            }
-        //        }
-
+   
         public ActionResult GraficoHistorico()
         {
             return View();
@@ -231,69 +193,56 @@ namespace sensoresapp.Controllers
         }
 
         // GET: Sensor/Create
-        public ActionResult Create(int id)
+        public ActionResult Crear()
         {
             ViewBag.IdSensor = "";
             ViewBag.Creo = false;
             ViewBag.Mensaje = string.Empty;
 
-
             return View();
         }
 
-
-
-
-
-
-
-
-            // GET: Sensor/Edit/5
-            public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Sensor/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Crear(ClaseSensor model, string returnUrl)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                bool PudoCrear = API.CrearSensor(model);
+                if (PudoCrear)
+                {
+                    ViewBag.Creo = true;
+                    ViewBag.Mensaje = "Sensor Creado Correctamente, Presione Volver a lista";
+                }
+
+                //ViewBag.IdSensor = "";
+                //ViewBag.Creo = false;
+                //ViewBag.Mensaje = string.Empty;
             }
-            catch
-            {
-                return View();
-            }
+
+            return View();
         }
 
         // GET: Sensor/Delete/5
         public ActionResult Eliminar(int id)
         {
-            ViewBag.IdSensor = id;
-            ViewBag.Elimino = false;
-            ViewBag.Mensaje = string.Empty;
+            bool PudoEliminar = API.EliminarSensor(id);
+            if (PudoEliminar)
+            {
+                ViewBag.Mensaje = "Eliminó Correctamente, Presione Volver a lista";
+            }
+            else
+            {
+                ViewBag.Mensaje = "No se pudo eliminar, Presione Volver a lista";
+            }
+
+            //ViewBag.IdSensor = id;
+            //ViewBag.Elimino = false;
+            //ViewBag.Mensaje = string.Empty;
             return View();
         }
 
-
-        // POST: Sensor/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

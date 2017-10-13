@@ -86,11 +86,14 @@
                                                 @item.refresco
                                             </td>
                                             <td>
-                                                @Html.ActionLink("ABM", "Editar","Sensor", new { id = @item.id }, null)
+                                                @Html.ActionLink("Editar", "Editar","Sensor", new { id = @item.id }, null)
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Detalle", "Detalle", "Sensor", new { id = @item.id }, null)
+                                                <a href="/Sensor/Eliminar/@item.id" onClick="return confirm('Seguro que desea eliminar el sensor @item.id?')">Eliminar</a>
                                             </td>
+                                            @*<td>
+                                                @Html.ActionLink("Detalle", "Detalle", "Sensor", new { id = @item.id }, null)
+                                            </td>*@
                                         </tr>
                                     }
 
@@ -103,8 +106,8 @@
                 <span class="text-danger">@Html.Raw(ViewBag.Mensaje)</span>
             </div>
         </div>
-        <div class="col-lg-offset-6 col-md-6"> 
-            <button class="text-center">  @Html.ActionLink("Ir a Buscador", "Buscador", "Sensor")</button> 
+        <div class="col-md-12"> 
+            <a class="btn btn-success text-center" href="/Sensor/Crear">Crear Sensor</a>
         </div>
     </div><br/>
 
